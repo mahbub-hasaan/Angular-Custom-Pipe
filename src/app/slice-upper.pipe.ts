@@ -5,8 +5,8 @@ import { Pipe, PipeTransform } from '@angular/core';
 })
 export class SliceUpperPipe implements PipeTransform {
 
-  transform(text: string): string {
-    return text;
+  transform(val: string): string {
+    return val.replace(/([a-z0-9])([A-Z])/g, '$1 $2').toUpperCase();
   }
 
 }
